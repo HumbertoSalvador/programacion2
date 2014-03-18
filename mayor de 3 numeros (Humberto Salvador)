@@ -1,0 +1,46 @@
+// mayor de tres numeros.cpp : Defines the entry point for the console application.
+// Humberto Salvador Marquez
+//18/03/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int a,b,c;
+
+	cout<< "ingrese a \n";
+	cin>> a;
+	cout<< "ingrese b \n";
+	cin>> b;
+	cout<< "ingrese c \n";
+	cin>> c;
+
+	if(a>b)
+	  {
+		  if(a>c)
+		  {
+			  cout<< "el mayor es: "<<a;
+		  }
+		  else
+		  {
+			  cout<< "el mayor es: "<<c;
+		  }
+	  }
+	else
+	{
+		if(b>c)
+		{
+			cout<< "el mayor es: "<<b;
+		}
+		else
+		{
+			cout<< "el mayor es: "<<c;
+		}
+	
+	}
+	getch();
+}
