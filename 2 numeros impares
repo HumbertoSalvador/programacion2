@@ -1,0 +1,35 @@
+// suma y producto.cpp : Defines the entry point for the console application.
+// Nombre: Humberto Salvador
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int a,b,res;
+
+	cout<<"\n\n========================\n\n";
+
+	cout<<"ingrese el primer numero\n";
+	cin>> a;
+	cout<<"ingrese el segundo numero\n";
+	cin>> b;
+
+	if ((a%2==0) && (b%2==0))
+	{ 
+		res=a+b;
+
+	}
+
+	else
+	{
+		res=a*b;
+	}
+
+	cout<<"la respuesta es:" << res;
+	getch();
+}
