@@ -1,0 +1,24 @@
+// me llamo Humberto.cpp : Defines the entry point for the console application.
+//AUTOR:HUMBERTO SALVADOR MARQUEZ
+//FECHA: 22/04/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	char caracter='*';
+    int I;
+	for(I=1;I<=20;I++)
+	{
+		cout<<caracter;
+		cout<<"*me llamo humberto*";
+		cout<<caracter;
+	}
+	
+
+getch();
+}
