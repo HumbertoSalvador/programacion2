@@ -1,0 +1,212 @@
+1.- a) Algoritmo para conducir un vehículo.
+Inicio, encender vehículo, mientras esté encendido: interpretar órdenes de movimiento, apagar vehículo, fin.
+b) Algoritmo para realizar una llamada telefónica.
+Inicio, leer números, buscar número marcado, conectar, pausa, desconectar números, fin.
+c) Algoritmo para resolver la ecuación cuadrática.
+x=(-b±√(b^2-4ac))/2a
+Aplicar fórmula, efectuar operaciones dentro de la raíz, si la raíz es negativa: reemplazar raíz de -1 con i, efectuar operaciones matemáticas restantes
+2.- a) Promedio de tres números.
+Inicio
+Entero: A,B,C;
+Real: P;
+Leer ( A,B,C);
+P = (A+B+C)/3;
+Escribir (P);
+Fin.
+b) Calcular el área de un triángulo.
+Inicio
+Entero: Base, Altura;
+Real: Área;
+Leer (Base, Altura);
+Área = (Base*Altura)/2;
+Escribir (Área);
+Fin.
+
+c) Cálculo de cuentas de un supermercado.
+Inicio
+
+Entero: cant1,cant2,cant3,cant4,cant5;
+Real: pre1,pre2,pre3,pre4,pre5,Total;
+Leer (cant1,cant2,cant3,cant4,cant5);
+Leer (pre1,pre2,pre3,pre4,pre5);
+Total = cant1*pre1 + cant2*pre2 + cant3*pre3 + cant4*pre4 + cant5*pre5;
+Escribir (Total);
+Fin.
+d) Nota final de un alumno de la UPSA.
+Inicio
+Entero: E1,E2,E3,PP,EF;
+Real: Nota;
+Leer ( E1,E2,E3,PP,EF);
+Nota = (E1+E2+E3)*40/100 + PP*20/100 + FF*40/100;
+Escribir (Nota);
+Fin.
+3.- Circunferencia, área y volumen de una esfera.
+Inicio
+Real: D,r,V,A,C;
+Leer (D);
+r= D/2;
+V = 3.14159*r*r*r*4/3;
+A = 3.14159*4*r*r;
+C = 3.14159*2*r; 
+Escribir (“Volumen:”, V);
+Escribir (“Area:” ,A);
+Escribir (“Circunferencia:”, C);
+Fin.
+4.- Operaciones Aritméticas
+Inicio
+Real: A,B,Suma,Diferencia,Producto,Cociente;
+Leer (A,B);
+Suma = A+B;
+Diferencia = A-B;
+Producto = A*B;
+Cociente = A/B;
+Fin.
+5.- Nota final alumno X
+Inicio
+Entero: E1,E2,E3,EF,PP,EP;
+Real: Nota;
+Leer (E1,E2,E3,PP,EF,EP);
+Nota = (E1+E2+E3)*45/100 + PP*15/100 + FF*30/100 + EP*10/100;
+Escribir (Nota);
+Fin.
+6.- Salario neto trabajador
+Inicio
+caracter: Nombre
+Entero: HorasxMes;
+Real: PrecioxHr ,Salario;
+Leer Nombre;
+Leer HorasxMes;
+Leer PrecioxHr;
+Salario = (HorasxMes*PrecioxHr)*87/100;
+Escribir (Nombre “, salario neto: “ Salario);
+Fin.
+7.- Interés simple
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int n;
+	float i,I,K;
+
+	cout<<"interes simple I:";
+	cin>>I;
+
+	cout<<"tasa de interes i:";
+	cin>>i;
+
+	cout<<"cantidad de dias n:";
+	cin>>n;
+
+	K = I/(i*n/360);
+
+	cout<<"interes simple producido"<< K;
+}
+8.- Ver Horario
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int hora, minuto, segundo, hora2;
+	cout<<"ingrese hora:";
+	cin>>hora>>minuto>>segundo;
+	if( hora > 12)
+	{
+		hora2 = hora – 12;
+	}
+
+	if( hora = 0)
+	{
+		hora2 = 12;
+	}
+	cout<<hora2<<":"<<minuto<<":"<<segundo;
+	if( hora >= 12)
+	{
+		cout<<"PM";
+	}
+	else
+	{
+		cout<<"AM";
+	}
+getch();
+}
+9.- Tasa de interés compuesto.
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int n;
+	float i,d,K;
+
+	cout<<"total dias de interes compuesto d:";
+	cin>>d;
+
+	cout<<"tasa de interes i:";
+	cin>>i;
+
+	cout<<"cantidad de dias n:";
+	cin>>n;
+
+	while(n>d)
+	{
+		K = K + K*i/100;
+		n = n-d;
+	}
+
+	cout<<"interes producido"<< K;
+getch();
+}
+10.- Ecuación cuadrática
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	float a,b,c,s,x_1,x_2;
+	cout<<("Introduzca el coeficiente de x al cuadrado\n");
+	cin>>a;
+	cout<<("Introduzca el coeficiente de x\n");
+	cin>>b;
+	cout<<("Introduzca el coeficiente independiente\n");
+	cin>>c;
+	if(a==0)
+	{
+		x_1=-c/b;
+		cout<<"La ecuacion es de primer grado, y el unico valor de x es "<<x_1<<endl;
+	}
+	else
+	{
+		s=(b*b-4*a*c);
+		if(s>=0)
+		{
+			x_1=(-b+sqrtf(s))/(2*a);
+			x_2=(-b-sqrtf(s))/(2*a);
+			cout<<"El primer valor de x es "<<x_1<<endl;
+			cout<<"El segundo valor de x es "<<x_2<<endl;
+		}
+		else
+		{
+			x_1=(-b)/(2*a);
+			x_2=(sqrtf(-s)/2*a);
+			cout<<"Solucion imaginaria");
+			cout<<"x es "<< x_1<<" +- "<<x_2<<endl;
+		}
+	}
+	getch();
+}
+
