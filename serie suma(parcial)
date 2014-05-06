@@ -1,0 +1,38 @@
+// serie suma.cpp : Defines the entry point for the console application.
+//Autor: Humberto Salvador Marquez
+//fecha: 06/05/14
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+using namespace std;
+
+void main()
+{
+	int N,f,sig;
+	float s,i,x;
+	
+	cout<< "ingresar X:";
+	cin>> x;
+	cout<< "ingresar N:";
+	cin>> N;
+
+
+	s=7;
+	f=1;
+	sig=1;
+
+	for(i=1;i<=N;i++)
+	 { 
+		 f=f*(i+1);
+		 s=s+sig*(pow(x,i))/f;
+		 sig=-1*sig;
+		
+	 }
+	cout<< "la suma es:" <<s;
+
+	getch();
+}
+
